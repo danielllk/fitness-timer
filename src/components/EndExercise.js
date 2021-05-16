@@ -21,7 +21,11 @@ export default function ExerciseTimer() {
         </div>
       </div>
       <div>
-        <a href="https://fractaart.com" rel="noopener" target="_blank">
+        <a
+          href="https://fractaart.com"
+          rel="noreferrer noopener"
+          target="_blank"
+        >
           <img src={fractaLogo} alt="fracta art logo" />
           <p>by Fracta</p>
         </a>

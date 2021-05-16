@@ -10,7 +10,6 @@ export default function ChooseExerciseTime() {
   const [showCustom, setShowCustom] = useState(false);
   const [addMin, setAddMin] = useState(0);
   const [addSec, setAddSec] = useState(0);
-  const [addSecMin, setAddSecMin] = useState(0);
   const [btnActive, setBtnActive] = useState(false);
   const dataExerciseTime = [
     { id: 1, text: "5s" },
@@ -62,7 +61,6 @@ export default function ChooseExerciseTime() {
     //reset custom min and sec
     setAddMin(0);
     setAddSec(0);
-    setAddSecMin(0);
     setExerciseTime(0);
 
     //disable button
