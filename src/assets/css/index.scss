@@ -1,0 +1,13 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "itimregular", Verdana, sans-serif;
+}
+body,
+html {
+  background-image: url("../img/back2.jpg");
+  background-size: cover;
+}
+@import "./sound", "./fonts", "./variable", "./mixins", "./intro",
+  "./chooseExerciseTime", "./chooseExerciseRestTime", "./chooseExerciseRepeats",
+  "./start", "./doingExercise", "./resting", "./endExercise";

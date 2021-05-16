@@ -1,25 +1,68 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Intro from "./components/Intro";
+import ChooseExerciseTime from "./components/ChooseExerciseTime";
+import ChooseExerciseRestTime from "./components/ChooseExerciseRestTime";
+import ChooseExerciseRepeats from "./components/ChooseExerciseRepeats";
+import Start from "./components/Start";
+import ExerciseTimer from "./components/ExerciseTimer";
+import ExerciseRestTimer from "./components/ExerciseRestTimer";
+import EndExercise from "./components/EndExercise";
+import "./assets/css/index.scss";
+import DoingExercise from "./components/DoingExercise";
+import Resting from "./components/Resting";
+import sound from "./assets/img/sound-icon.svg";
+export default function App() {
+  const [playSound, setPlaySound] = useState(false);
 
-function App() {
+  //add state of sound to localstorage
+  localStorage.setItem("playSound", playSound);
+
+  const soundOnOff = () => {
+    setPlaySound(!playSound);
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <Router>
+      <div>
+        <div
+          className={`sound-icon ${playSound ? "sound-active" : ""}`}
+          onClick={soundOnOff}
         >
-          Learn React
-        </a>
-      </header>
-    </div>
+          <img src={sound} alt=" sound icon" />
+        </div>
+        <Switch>
+          <Route exact path="/">
+            <Intro />
+          </Route>
+          <Route exact path="/cet">
+            <ChooseExerciseTime />
+          </Route>
+          <Route exact path="/cert">
+            <ChooseExerciseRestTime />
+          </Route>
+          <Route exact path="/cer">
+            <ChooseExerciseRepeats />
+          </Route>
+          <Route exact path="/start">
+            <Start />
+          </Route>
+          <Route exact path="/et">
+            <ExerciseTimer />
+          </Route>
+          <Route exact path="/ert">
+            <ExerciseRestTimer />
+          </Route>
+          <Route exact path="/ee">
+            <EndExercise />
+          </Route>
+          <Route exact path="/de">
+            <DoingExercise />
+          </Route>
+          <Route exact path="/r">
+            <Resting />
+          </Route>
+        </Switch>
+      </div>
+    </Router>
   );
 }
-
-export default App;

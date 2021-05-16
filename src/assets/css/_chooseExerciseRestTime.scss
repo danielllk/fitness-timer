@@ -1,0 +1,23 @@
+.ChooseExerciseRestTime {
+  @include container;
+  @include btnStates;
+  @include headerStyle;
+  @include dots;
+  .choose-exercise-time {
+    @include grid-container;
+  }
+  .choose-custom-time {
+    text-align: center;
+    @include choose-custom-time;
+    p {
+      color: #fff;
+    }
+  }
+  .btn {
+    text-align: center;
+    @include btn;
+  }
+  .active {
+    @include active;
+  }
+}

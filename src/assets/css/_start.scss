@@ -1,0 +1,35 @@
+.Start {
+  @include container;
+  @include btnStates;
+  @include headerStyle;
+  .total-info-container {
+    .btn {
+      text-align: center;
+      @include btn;
+      margin-top: 25px;
+      background: #fff !important;
+      color: $main-color;
+    }
+    .start-btn {
+      @include roundBtn;
+      background-color: #fff !important;
+      color: $btn-active !important;
+      cursor: pointer;
+    }
+    .total-info-box {
+      background: #fff;
+      padding: 25px;
+      border: 1px solid #0059b3;
+      letter-spacing: 1px;
+      p {
+        padding: 5px;
+        color: $main-color;
+        font-size: 18px;
+        span {
+          padding-left: 5px;
+          color: $btn-active;
+        }
+      }
+    }
+  }
+}
