@@ -1,5 +1,11 @@
 # Fintess Timer App
 
-## easy to set up
+## Easy to set up
 
-## perfect for plank
+## Perfect for plank exercises
+
+## Remember your plan ( Uses Local Storage )
+
+## 100% responsive
+
+## Demo here: https://tender-galileo-6edbd4.netlify.app/start
