@@ -8,4 +8,4 @@
 
 ## 100% responsive
 
-## Demo here: https://tender-galileo-6edbd4.netlify.app/start
+## Demo here: https://tender-galileo-6edbd4.netlify.app
