@@ -24,8 +24,8 @@ export default function ChooseExerciseTime() {
     { id: 10, text: "50s" },
     { id: 11, text: "55s" },
     { id: 12, text: "60s" },
-    { id: 13, text: "55s" },
-    { id: 14, text: "60s" },
+    { id: 13, text: "65s" },
+    { id: 14, text: "70s" },
     { id: 15, text: "Custom" },
   ];
 
